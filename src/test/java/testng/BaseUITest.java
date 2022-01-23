@@ -10,7 +10,7 @@ import java.util.Map;
 
 public abstract class BaseUITest extends BaseTest {
 
-    @BeforeMethod(groups = "ui.test.example")
+    @BeforeMethod
     public void setupDriver() {
         String driver = Environment.getCurrentEnvironment().get("driver");
         Map<String, Object> capabilities = Environment.getCurrentEnvironment().getOrDefault(driver, new HashMap<>());
@@ -18,7 +18,7 @@ public abstract class BaseUITest extends BaseTest {
 
     }
 
-    @AfterMethod(groups = "ui.test.example")
+    @AfterMethod
     public void quitDriver() {
         DriverFactory.quitDriver();
     }

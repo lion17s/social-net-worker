@@ -1,11 +1,13 @@
-package example.ui.pages;
+package social.net.worker.ui.pages;
 
 import io.qameta.allure.Step;
+import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import ta.core.driver.DriverFactory;
 import ta.core.ui.BaseUIElement;
 
+@Log4j2
 public class MixCloudPage extends BaseUIElement {
 
     @FindBy(className = "play-button-wrap")
@@ -25,6 +27,7 @@ public class MixCloudPage extends BaseUIElement {
 
     @Step
     public void keepListeningFor(long minutes) throws InterruptedException {
+        log.debug("Keep listening for {}", minutes);
         Thread.sleep(minutes * 60 * 1000);
     }
 

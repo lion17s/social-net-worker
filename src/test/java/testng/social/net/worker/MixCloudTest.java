@@ -1,13 +1,13 @@
-package testng.example;
+package testng.social.net.worker;
 
-import example.ui.pages.MixCloudPage;
+import social.net.worker.ui.pages.MixCloudPage;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import testng.BaseUITest;
 
 import java.util.Random;
 
-public class ExampleMixCloudTest extends BaseUITest {
+public class MixCloudTest extends BaseUITest {
 
     @DataProvider(parallel = true)
     private static Object[][] showProvider() {
@@ -20,12 +20,10 @@ public class ExampleMixCloudTest extends BaseUITest {
     @Test(groups = "ui.test.example", dataProvider = "showProvider")
     @SuppressWarnings("OptionalGetWithoutIsPresent")
     public void verifyCanListenToShow(String showUrl) throws InterruptedException {
-        int minutesToListen = new Random().ints(1, 60).findFirst().getAsInt();
-        System.out.println("Minutest to listen " + minutesToListen);
         MixCloudPage
                 .openShowPage(showUrl)
                 .playShow()
-                .keepListeningFor(minutesToListen);
+                .keepListeningFor(new Random().ints(1, 60).findFirst().getAsInt());
     }
 
 }
