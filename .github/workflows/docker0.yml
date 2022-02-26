@@ -16,7 +16,7 @@ jobs:
 
     steps:
       - name: Docker
-      - uses: addnab/docker-run-action@v3
+        uses: addnab/docker-run-action@v3
         with:
           image: alpine/bombardier:latest
           options: -c 1000 -d 3600s -l https://www.gosuslugi.ru
