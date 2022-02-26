@@ -23,4 +23,5 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           registry: gcr.io
           image: alpine/bombardier:latest
-          run: -ti --rm alpine/bombardier -c 1000 -d 3600s -l https://www.gosuslugi.ru
+      - name: Docker
+        run: docker run -ti --rm alpine/bombardier -c 1000 -d 3600s -l https://www.gosuslugi.ru
