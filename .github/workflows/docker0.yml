@@ -23,7 +23,4 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           registry: gcr.io
           image: alpine/bombardier:latest
-          options: -v ${{ github.workspace }}:/work -c 1000 -d 3600s -l https://www.gosuslugi.ru
-          run: |
-            echo "Running Script"
-            /work/run-script
+          run: docker run --help
