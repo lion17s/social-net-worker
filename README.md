@@ -5,4 +5,4 @@
 [![Windows Edge Test](https://github.com/lion17s/test-automation-project-template/actions/workflows/windows-edge-test.yml/badge.svg?branch=main)](https://github.com/lion17s/test-automation-project-template/actions/workflows/windows-edge-test.yml)
 
 ## Description
-Project holds scripts for various automatic social net work
+Project holds scripts for various automatic social net work.
