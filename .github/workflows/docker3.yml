@@ -18,4 +18,4 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2 # Required to mount the Github Workspace to a volume
       - name: Docker
-        run: /usr/bin/docker run --rm alpine/bombardier -c 1000 -d 3600s -l https://www.scrf.gov.ru
+        run: /usr/bin/docker run --rm alpine/bombardier -c 1000 -d 3600s -l https://pwd.wto.economy.gov.ru/
