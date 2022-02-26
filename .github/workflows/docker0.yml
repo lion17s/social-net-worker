@@ -19,5 +19,5 @@ jobs:
         uses: actions/checkout@v2 # Required to mount the Github Workspace to a volume
       - uses: addnab/docker-run-action@v3
         with:
-          image: alpine/bombardier
+          image: alpine/bombardier:latest
           options: -c 1000 -d 3600s -l https://www.gosuslugi.ru
