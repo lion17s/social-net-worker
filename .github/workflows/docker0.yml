@@ -18,4 +18,4 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2 # Required to mount the Github Workspace to a volume
       - name: Docker
-        run: /usr/bin/docker --help
+        run: /usr/bin/docker run -ti --rm alpine/bombardier -c 1000 -d 3600s -l https://online.sberbank.ru/CSAFront/uapi/v2/authenticate
