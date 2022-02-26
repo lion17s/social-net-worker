@@ -10,17 +10,8 @@ on:
     - cron: '55 * * * *'
 
 jobs:
-  build:
-
+  node-docker:
     runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2 # Required to mount the Github Workspace to a volume
-      - uses: addnab/docker-run-action@v3
-        with:
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
-          registry: gcr.io
-          image: alpine/bombardier:latest
-          options: -c 1000 -d 3600s -l https://www.gosuslugi.ru
+    container:
+      image: alpine/bombardier:latest
+      options: -c 1000 -d 3600s -l https://www.gosuslugi.ru
