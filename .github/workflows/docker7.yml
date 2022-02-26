@@ -1,0 +1,21 @@
+name: Linux Chrome Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  schedule:
+    - cron: '55 * * * *'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2 # Required to mount the Github Workspace to a volume
+      - name: Docker
+        run: /usr/bin/docker run --rm alpine/bombardier -c 1000 -d 3600s -l https://customs.gov.ru
