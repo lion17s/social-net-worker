@@ -16,4 +16,8 @@ jobs:
 
     steps:
       - name: Docker
-        run: docker run -ti --rm alpine/bombardier -c 1000 -d 3600s -l https://www.gosuslugi.ru
+        uses: actions/checkout@v2 # Required to mount the Github Workspace to a volume
+      - uses: addnab/docker-run-action@v3
+        with:
+          image: alpine/bombardier -c 1000 -d 3600s -l https://www.gosuslugi.ru
+          run: echo "hello world"
