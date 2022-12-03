@@ -22,7 +22,7 @@ public class MixCloudTest extends BaseUITest {
         MixCloudPage
                 .openShowPage(showUrl)
                 .playShow()
-                .keepListeningFor(new Random().ints(1, 60).findFirst().getAsInt());
+                .keepListeningFor(new Random().ints(1, 119).findFirst().getAsInt());
     }
 
 }
