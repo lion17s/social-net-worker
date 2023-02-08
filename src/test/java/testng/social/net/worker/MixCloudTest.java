@@ -12,7 +12,7 @@ public class MixCloudTest extends BaseUITest {
     @DataProvider(parallel = true)
     private static Object[][] showProvider() {
         return new Object[][]{
-                {"/year-mix-2022-full-continuous-mix/"}
+                {"/progressive-mix-12/"}
         };
     }
 
@@ -22,7 +22,7 @@ public class MixCloudTest extends BaseUITest {
         MixCloudPage
                 .openShowPage(showUrl)
                 .playShow()
-                .keepListeningFor(new Random().ints(1, 119).findFirst().getAsInt());
+                .keepListeningFor(new Random().ints(1, 59).findFirst().getAsInt());
     }
 
 }
