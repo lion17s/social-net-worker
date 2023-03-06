@@ -12,7 +12,7 @@ public class MixCloudTest extends BaseUITest {
     @DataProvider(parallel = true)
     private static Object[][] showProvider() {
         return new Object[][]{
-                {"/progressive-mix-13/"}
+                {"/progressive-mix-14/"}
         };
     }
 
