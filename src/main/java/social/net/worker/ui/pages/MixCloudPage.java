@@ -10,7 +10,7 @@ import ta.core.ui.BaseUIElement;
 @Log4j2
 public class MixCloudPage extends BaseUIElement {
 
-    @FindBy(className = "play-button-wrap")
+    @FindBy(title = "Play")
     private WebElement playButton;
 
     @Step
